@@ -33,27 +33,45 @@ const team =[
     }
 ]
 
-//  LOGIC
-for(let i=0; i<team.length; i++){
-    const currElem = team[i];
-    let stringHTML = '<div id="card">';     // if "innerHTML = <div>"" , really result is "<div></div>"
-    // console.log(currElem["name"]);                                 // brak notation
-    // console.log(currElem["profession"]);
-    // console.log(currElem["photo"]);
-    // console.log(currElem.name);                                     // dot notation
-    // console.log(currElem.profession);
-    // console.log(currElem.photo);
-// LOGIC AND OUTPUT
-    for(let elem in currElem){                                         //for in    
-        console.log(currElem[elem]);
-        console.log(elem);
-        if(elem !== "photo"){
-            stringHTML = stringHTML +`<span><strong>${currElem[elem]}</strong></span><br>`
-        } else{
-            stringHTML= stringHTML + `<img src="./img/${currElem[elem]}" alt=""></div><br>`
-            document.getElementById("result").innerHTML += stringHTML;
-        }
-    }
-    console.log("--------------------------------------------");
+//  with for  and for in
+
+
+// // LOGIC
+// for(let i=0; i<team.length; i++){
+//     const currElem = team[i];
+//     let stringHTML = '<div class="card">';     // if "innerHTML = <div>"" , really result is "<div></div>"
+//     console.log(currElem["name"]);                                 // brak notation
+//     console.log(currElem["profession"]);
+//     console.log(currElem["photo"]);
+//     console.log(currElem.name);                                     // dot notation
+//     console.log(currElem.profession);
+//     console.log(currElem.photo);
+// // LOGIC AND OUTPUT
+//     for(let elem in currElem){                                         //for in    
+//         console.log(currElem[elem]);
+//         console.log(elem);
+//         if(elem !== "photo"){
+//             stringHTML = stringHTML +`<span><strong>${currElem[elem]}</strong></span><br>`
+//         } else{
+//             stringHTML= stringHTML + `<img src="./img/${currElem[elem]}" alt=""></div><br>`
+//             document.getElementById("result").innerHTML += stringHTML;
+//         }
+//     }
+//     console.log("--------------------------------------------");
     
-}
+// }
+
+
+
+//  with forEach
+const resultElem = document.getElementById("result");
+
+team.forEach((currElem) => { 
+    console.log(currElem);
+    resultElem.innerHTML += 
+    `<div class="card">
+        <h2>${currElem.name}</h2>
+        <span>${currElem.profession}</span>
+        <img src="./img/${currElem.photo}">
+    </div>`
+});
