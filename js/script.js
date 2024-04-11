@@ -44,7 +44,12 @@ for(let i=0; i<team.length; i++){
     document.getElementById("result").innerHTML += "<div>";
     for(let elem in currElem){                                         //for in    
         console.log(currElem[elem]);
-        document.getElementById("result").innerHTML += `<span>${currElem[elem]}</span><br>`
+        console.log(elem);
+        if(elem !== "photo"){
+            document.getElementById("result").innerHTML += `<span>${currElem[elem]}</span><br>`
+        } else{
+            document.getElementById("result").innerHTML += `<img src="./img/${currElem[elem]}" alt="">`
+        }
     }
     document.getElementById("result").innerHTML += "</div><br>"
     console.log("--------------------------------------------");
