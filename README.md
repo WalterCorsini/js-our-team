@@ -34,3 +34,16 @@ viasualizza nel dom in una card.
 ## OUTPUT
 9. concateno nella variabile associata all id "result" del DOM una stringa con tutte le key di "currElem"
 
+
+## LOGIC // cor forEach e for in
+6. associo alla "variabile" resultElem l'elemento con id "result"
+7. creo ciclo forEach con una variabile "currElem"
+8. creo variabile "stringHTML per concatenare dei valori da inserire alla fine del for in nel DOM
+9. creo ciclo for in
+10. mostro in console.log gli elementi negli object
+11. se la chiave non è "photo"
+    - concateno alla mia variabile il testo  con i suoi tag.
+12. altrimenti
+    - concateno alla mia variabile l'immagine e chiudo il tag <div>
+## OUTPUT  // con ciclo for e for in
+13. inserisco la stringa creata nel DOM tramite l'id "result"
