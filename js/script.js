@@ -1,5 +1,5 @@
 // declaration object array
-
+// INPUT
 const team =[
     {
         name: "Wayne Barnett",
@@ -33,20 +33,22 @@ const team =[
     }
 ]
 
+//  LOGIC
 for(let i=0; i<team.length; i++){
     const currElem = team[i];
-    let stringHTML = '<div id="card">';
+    let stringHTML = '<div id="card">';     // if "innerHTML = <div>"" , really result is "<div></div>"
     // console.log(currElem["name"]);                                 // brak notation
     // console.log(currElem["profession"]);
     // console.log(currElem["photo"]);
-    // console.log(currElem.name);
+    // console.log(currElem.name);                                     // dot notation
     // console.log(currElem.profession);
     // console.log(currElem.photo);
+// LOGIC AND OUTPUT
     for(let elem in currElem){                                         //for in    
         console.log(currElem[elem]);
         console.log(elem);
         if(elem !== "photo"){
-            stringHTML = stringHTML +`<span>${currElem[elem]}</span><br>`
+            stringHTML = stringHTML +`<span><strong>${currElem[elem]}</strong></span><br>`
         } else{
             stringHTML= stringHTML + `<img src="./img/${currElem[elem]}" alt=""></div><br>`
             document.getElementById("result").innerHTML += stringHTML;
