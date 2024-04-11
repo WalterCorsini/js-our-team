@@ -35,23 +35,23 @@ const team =[
 
 for(let i=0; i<team.length; i++){
     const currElem = team[i];
+    let stringHTML = '<div id="card">';
     // console.log(currElem["name"]);                                 // brak notation
     // console.log(currElem["profession"]);
     // console.log(currElem["photo"]);
     // console.log(currElem.name);
     // console.log(currElem.profession);
     // console.log(currElem.photo);
-    document.getElementById("result").innerHTML += "<div>";
     for(let elem in currElem){                                         //for in    
         console.log(currElem[elem]);
         console.log(elem);
         if(elem !== "photo"){
-            document.getElementById("result").innerHTML += `<span>${currElem[elem]}</span><br>`
+            stringHTML = stringHTML +`<span>${currElem[elem]}</span><br>`
         } else{
-            document.getElementById("result").innerHTML += `<img src="./img/${currElem[elem]}" alt="">`
+            stringHTML= stringHTML + `<img src="./img/${currElem[elem]}" alt=""></div><br>`
+            document.getElementById("result").innerHTML += stringHTML;
         }
     }
-    document.getElementById("result").innerHTML += "</div><br>"
     console.log("--------------------------------------------");
     
 }
