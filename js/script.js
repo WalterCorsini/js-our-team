@@ -77,16 +77,16 @@ const resultElem = document.getElementById("result");
 // });
 
 
-// with forEach and for in
-// team.forEach((currElem) => { 
-//     let stringHTML = '<div class="card">'; 
-//     for(let elem in currElem){                                         //for in    
-//                 console.log(currElem[elem]);
-//                 if(elem !== "photo"){
-//                     stringHTML = stringHTML +`<span><strong>${currElem[elem]}</strong></span><br>`
-//                 } else{
-//                     stringHTML= stringHTML + `<img src="./img/${currElem[elem]}" alt=""></div><br>`
-//                     document.getElementById("result").innerHTML += stringHTML;
-//                 }
-//             }
-// });
+with forEach and for in
+team.forEach((currElem) => { 
+    let stringHTML = '<div class="card">'; 
+    for(let elem in currElem){                                         //for in    
+                console.log(currElem[elem]);
+                if(elem !== "photo"){
+                    stringHTML = stringHTML +`<span><strong>${currElem[elem]}</strong></span><br>`
+                } else{
+                    stringHTML= stringHTML + `<img src="./img/${currElem[elem]}" alt=""></div><br>`
+                    document.getElementById("result").innerHTML += stringHTML;
+                }
+            }
+});
