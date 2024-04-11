@@ -33,3 +33,17 @@ const team =[
     }
 ]
 
+for(let i=0; i<team.length; i++){
+    const currElem = team[i];
+    // console.log(currElem.name);                                     // dot notation
+    // console.log(currElem.profession);
+    // console.log(currElem.photo);
+    console.log("--------------------------------------------");
+    // console.log(currElem["name"]);                                 // brak notation
+    // console.log(currElem["profession"]);
+    // console.log(currElem["photo"]);
+    for(let elem in currElem){                                         //for in
+        
+        console.log(currElem[elem]);
+    }
+}
