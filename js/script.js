@@ -58,14 +58,12 @@ const team =[
 //         }
 //     }
 //     console.log("--------------------------------------------");
-    
 // }
 
 
 
 //  with forEach
-const resultElem = document.getElementById("result");
-
+// const resultElem = document.getElementById("result");
 // team.forEach((currElem) => { 
 //     console.log(currElem);
 //     resultElem.innerHTML += 
@@ -76,17 +74,27 @@ const resultElem = document.getElementById("result");
 //     </div>`
 // });
 
+// const resultElem = document.getElementById("result");
+// with forEach and for in
+// team.forEach((currElem) => { 
+//     let stringHTML = '<div class="card">'; 
+//     for(let elem in currElem){                                         //for in    
+//                 console.log(currElem[elem]);
+//                 if(elem !== "photo"){
+//                     stringHTML = stringHTML +`<span><strong>${currElem[elem]}</strong></span><br>`
+//                 } else{
+//                     stringHTML= stringHTML + `<img src="./img/${currElem[elem]}" alt=""></div><br>`
+//                     document.getElementById("result").innerHTML += stringHTML;
+//                 }
+//             }
+// });
 
-with forEach and for in
+
+
+// print in function
+const resultElem = document.getElementById("result");
 team.forEach((currElem) => { 
-    let stringHTML = '<div class="card">'; 
-    for(let elem in currElem){                                         //for in    
-                console.log(currElem[elem]);
-                if(elem !== "photo"){
-                    stringHTML = stringHTML +`<span><strong>${currElem[elem]}</strong></span><br>`
-                } else{
-                    stringHTML= stringHTML + `<img src="./img/${currElem[elem]}" alt=""></div><br>`
-                    document.getElementById("result").innerHTML += stringHTML;
-                }
-            }
+    const stringHTML = saveCard(currElem);
+    console.log(stringHTML);
+    document.getElementById("result").innerHTML += stringHTML;
 });

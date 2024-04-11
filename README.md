@@ -47,3 +47,20 @@ viasualizza nel dom in una card.
     - concateno alla mia variabile l'immagine e chiudo il tag <div>
 ## OUTPUT  // con ciclo for e for in
 13. inserisco la stringa creata nel DOM tramite l'id "result"
+
+
+## LOGIC PRINT IN FUNCTION
+6. associo alla "variabile" resultElem l'elemento con id "result"
+7. creo ciclo forEach con una variabile "currElem"
+8. creo variabile "stringHTML" a la associo alla funzione "saveCard"
+9. invoco la funzione saveCard e gli passo il parametro currElem
+    - creo variabile "string" e inserisco l'apertura del mio contenitore con classe "card"
+    - utilizzo for in
+        se la chiave non è "photo"
+            - concateno alla mia variabile il testo con i suoi tag.
+        altrimenti
+            - concateno alla mia variabile l'immagine e chiudo il tag <div> aperto all'inizio della funzione.
+        - ritorno il valore nello script
+## OUTPUT
+10. mostro nel console log il risultato della funzione
+11. inserisco nel DOM il risultato
