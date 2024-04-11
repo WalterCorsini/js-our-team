@@ -1,4 +1,0 @@
-function createCard(object,index){
-    
-
-}
